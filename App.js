@@ -1,20 +1,47 @@
-import { StatusBar } from 'expo-status-bar';
-import { StyleSheet, Text, View } from 'react-native';
+import * as React from 'react';
+import { NavigationContainer } from '@react-navigation/native';
+import { createBottomTabNavigator } from '@react-navigation/bottom-tabs';
+import { createStackNavigator } from '@react-navigation/stack';
+import { Ionicons } from '@expo/vector-icons';
 
-export default function App() {
+import ListaPetsScreen from './screens/ListaPetsScreen';
+import DetalhesPetScreen from './screens/DetalhesPetScreen';
+import CadastroScreen from './screens/CadastroScreen';
+import SobreScreen from './screens/SobreScreen';
+
+const Tab = createBottomTabNavigator();
+const Stack = createStackNavigator();
+
+function AdocaoStack() {
   return (
-    <View style={styles.container}>
-      <Text>Open up App.js to start working on your app!</Text>
-      <StatusBar style="auto" />
-    </View>
+    <Stack.Navigator>
+      <Stack.Screen name="ListaPets" component={ListaPetsScreen} options={{ title: 'Pets para Adoção' }} />
+      <Stack.Screen name="DetalhesPet" component={DetalhesPetScreen} options={{ title: 'Detalhes do Pet' }} />
+    </Stack.Navigator>
   );
 }
 
-const styles = StyleSheet.create({
-  container: {
-    flex: 1,
-    backgroundColor: '#fff',
-    alignItems: 'center',
-    justifyContent: 'center',
-  },
-});
+export default function App() {
+  return (
+    <NavigationContainer>
+      <Tab.Navigator
+        screenOptions={({ route }) => ({
+          headerShown: false,
+          tabBarIcon: ({ color, size }) => {
+            let iconName;
+            if (route.name === 'Adoção') iconName = 'paw';
+            else if (route.name === 'Cadastrar') iconName = 'add-circle';
+            else if (route.name === 'Sobre') iconName = 'information-circle';
+            return <Ionicons name={iconName} size={size} color={color} />;
+          },
+          tabBarActiveTintColor: '#ff6600',
+          tabBarInactiveTintColor: 'gray',
+        })}
+      >
+        <Tab.Screen name="Adoção" component={AdocaoStack} />
+        <Tab.Screen name="Cadastrar" component={CadastroScreen} />
+        <Tab.Screen name="Sobre" component={SobreScreen} />
+      </Tab.Navigator>
+    </NavigationContainer>
+  );
+}
