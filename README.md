@@ -8,9 +8,13 @@ Os usuários podem visualizar os animais disponíveis, ver detalhes como idade, 
 ## 📱 Telas
  
 <div align="center">
-<img width="200" src="https://github.com/user-attachments/assets/e56971ba-b33a-45b8-af60-c88495100edd" alt="Tela 1" />
-<img width="200" src="https://github.com/user-attachments/assets/b0d07bac-7275-437b-988c-b2f9436b6c53" alt="Tela 2" />
-<img width="200" src="https://github.com/user-attachments/assets/38888024-cbba-4848-b6f0-6ebee9e12887" alt="Tela 3" />
-<img width="200" src="https://github.com/user-attachments/assets/79cdc1ed-b576-471e-aa99-e7fea52b1dd1" alt="Tela 4" />
+<img width="200" height="839" alt="image" src="https://github.com/user-attachments/assets/994c0b1b-9dea-4eaa-bedb-aff23be6a773" />
+
+<img width="200" height="839" alt="image" src="https://github.com/user-attachments/assets/ad9b55fe-9420-44d6-9d58-9ed5320e8f51" />
+
+<img width="200" height="825" alt="image" src="https://github.com/user-attachments/assets/f2b719a7-a81f-4655-a2c7-46f3e246bd6a" />
+
+<img width="200" height="854" alt="image" src="https://github.com/user-attachments/assets/b6089fb3-8c88-4dba-af64-10d5f7fd17fe" />
+
 </div>
  
